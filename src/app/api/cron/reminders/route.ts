@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { Resend } from "resend";
 import { getDaysUntilRenewal, formatCurrency, CATEGORIES } from "@/lib/utils";
-import { addDays, startOfDay, endOfDay } from "date-fns";
+
+export const dynamic = "force-dynamic";
 
 const resend = new Resend(process.env.RESEND_API_KEY || "");
 

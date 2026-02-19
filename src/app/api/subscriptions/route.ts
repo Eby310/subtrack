@@ -3,6 +3,8 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import { prisma } from "@/lib/prisma";
 import { CATEGORIES } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const { userId } = await auth();
   if (!userId) {

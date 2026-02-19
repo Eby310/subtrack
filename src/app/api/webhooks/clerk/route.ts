@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { Webhook } from "svix";
 import { headers } from "next/headers";
 
+export const dynamic = "force-dynamic";
+
 const webhookSecret = process.env.CLERK_WEBHOOK_SECRET || "";
 
 interface UserEvent {
