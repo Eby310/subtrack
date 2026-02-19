@@ -4,6 +4,7 @@ import { Resend } from "resend";
 import { getDaysUntilRenewal, formatCurrency, CATEGORIES } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 const resend = new Resend(process.env.RESEND_API_KEY || "");
 
